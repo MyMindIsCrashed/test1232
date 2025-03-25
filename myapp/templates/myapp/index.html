@@ -26,7 +26,6 @@
             padding: 0 15px;
         }
     
-
         .header::after {
             content: '';
             position: absolute;
@@ -67,7 +66,6 @@
             }
         }
     
-
         .navbar {
             background-color: rgba(0, 123, 255, 0.8); 
             padding: 15px 0;
@@ -122,6 +120,14 @@
         .btn {
         border-radius: 5px; /
         }
+        #servicesCarousel .carousel-item {
+        padding: 20px; 
+        }
+        .carousel-item img {
+        height: 180px; 
+        object-fit: cover; 
+        border-radius: 10px; 
+        }
     </style>
     
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -149,14 +155,65 @@
     </header>
     
 
-<section class="container my-5" id="services">
-    <h2 class="text-center text-gradient">Наши услуги</h2>
-    <div class="row text-center">
-        <div class="col-md-4"><p>✔ Консультации специалистов</p></div>
-        <div class="col-md-4"><p>✔ Диагностика и анализы</p></div>
-        <div class="col-md-4"><p>✔ Хирургические операции</p></div>
-    </div>
-</section>
+    <section class="container my-5" id="services">
+        <h2 class="text-center text-gradient">Наши услуги</h2>
+    
+        <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="static/images/img_nduwnji3mji3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Консультации">
+                            <p class="text-center mt-2">Консультации специалистов</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="static/images/cu-1_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Диагностика">
+                            <p class="text-center mt-2">Диагностика и анализы</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="static/images/download-4_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Хирургия">
+                            <p class="text-center mt-2">Хирургические операции</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="static/images/download_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Терапия">
+                            <p class="text-center mt-2">Терапевтическое лечение</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="static/images/download-3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Консультации">
+                            <p class="text-center mt-2">Консультации специалистов</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="static/images/eye-exams-grayling-mi_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Диагностика">
+                            <p class="text-center mt-2">Диагностика и анализы</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="static/images/surgery_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Хирургия">
+                            <p class="text-center mt-2">Хирургические операции</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="static/images/img_nduwnji3mji3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Услуга">
+                            <p class="text-center mt-2">Прочее</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+    </section>
+    
+    
 
 <section class="container my-5" id="doctors">
     <h2 class="text-center text-gradient">Наши специалисты</h2>
