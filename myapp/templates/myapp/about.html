@@ -1,109 +1,166 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>О нас | МедЦентр</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>О нас | МедЦентр</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+
+    .navbar {
+      background-color: rgba(0, 123, 255, 0.8);
+      padding: 15px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+    }
+    
+    .navbar-nav .nav-item {
+      margin-left: 20px;
+    }
+    
+    .navbar-nav .nav-link {
+      color: white;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: #ffcc00;
+    }
+    
+    .nav-item #phone .nav-link {
+      font-size: 1.3rem;
+      font-weight: bold;
+      background-color: #ffcc00;
+      border-radius: 5px;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .nav-item #phone .nav-link:hover {
+      background-color: #e0a800;
+    }
+    
+    .content-section {
+      padding: 60px 0;
+      margin-top: 120px;
+    }
+    
+    .content-section h2,
+    .content-section h3 {
+      margin-bottom: 30px;
+    }
+    
+    .content-section p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    
+    footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 20px 0;
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">🏥 МедЦентр</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="about/">О нас</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#doctors">Наши врачи</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
-                    <li class="nav-item" id="phone"><a class="nav-link" href="tel:+74956208383">+7 (495) 620-83-83</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <section class="container my-5">
-        <h2 class="text-center text-gradient">О нас</h2>
-        <p class="text-center">
-            Мы — МедЦентр, предоставляющий широкий спектр медицинских услуг с высоким уровнем качества и заботой о каждом пациенте.
-            Наша команда врачей и специалистов использует самые современные методы диагностики и лечения.
-        </p>
-        <p class="text-center">
-            Наши услуги включают консультации специалистов, диагностику, хирургические операции, терапевтическое лечение и многое другое.
-            Мы стремимся сделать медицинские услуги доступными и качественными для каждого пациента.
-        </p>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">🏥 МедЦентр</a>g
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">О нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+          <li class="nav-item" id="phone"><a class="nav-link" href="tel:+74956208383">+7 (495) 620-83-83</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="container content-section">
+
+    <section>
+      <h2 class="text-center text-gradient">Сведения о МедЦентр</h2>
+      <p>
+        МедЦентр – современная клиника, предоставляющая широкий спектр медицинских услуг – от консультаций до высокотехнологичной диагностики и хирургии.
+        Мы оснащены современным оборудованием, а команда опытных специалистов регулярно повышает свою квалификацию, чтобы обеспечить качественное обслуживание.
+      </p>
+      <p>
+        Наша клиника использует инновационные методики, уделяя особое внимание индивидуальному подходу к каждому пациенту.
+      </p>
     </section>
 
-    <!-- Контактная информация -->
-    <section class="container my-5">
-        <h3 class="text-center">Контакты</h3>
-        <p class="text-center">Адрес: Москва, ул. Примерная, д. 1</p>
-        <p class="text-center">Телефон: +7 (495) 620-83-83</p>
+    <section class="mt-5">
+      <h2 class="text-center text-gradient">Миссия и цели</h2>
+      <p>
+        Наша миссия – обеспечить доступ к качественной медицинской помощи, используя современные технологии и лучшие практики.
+        Мы стремимся к постоянному развитию и совершенствованию всех процессов оказания услуг.
+      </p>
+      <ul>
+        <li>Обеспечение доступности качественной медицинской помощи.</li>
+        <li>Внедрение современных диагностических и лечебных технологий.</li>
+        <li>Постоянное профессиональное развитие персонала.</li>
+        <li>Создание комфортных условий для пациентов.</li>
+      </ul>
     </section>
 
-    <!-- Подвал -->
-    <footer class="bg-dark text-light text-center py-3">
-        <p>&copy; 2025 МедЦентр. Все права защищены.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>О нас | МедЦентр</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">🏥 МедЦентр</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
-                    <li class="nav-item" id="phone"><a class="nav-link" href="tel:+74956208383">+7 (495) 620-83-83</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <section class="container my-5">
-        <h2 class="text-center text-gradient">О нас</h2>
-        <p class="text-center">
-            Мы — МедЦентр, предоставляющий широкий спектр медицинских услуг с высоким уровнем качества и заботой о каждом пациенте.
-            Наша команда врачей и специалистов использует самые современные методы диагностики и лечения.
-        </p>
-        <p class="text-center">
-            Наши услуги включают консультации специалистов, диагностику, хирургические операции, терапевтическое лечение и многое другое.
-            Мы стремимся сделать медицинские услуги доступными и качественными для каждого пациента.
-        </p>
+    <section class="mt-5">
+      <h2 class="text-center text-gradient">История организации</h2>
+      <p>
+        МедЦентр был основан в [год основания] году с целью создания клиники, отвечающей самым высоким стандартам медицинского обслуживания.
+        С первых дней мы стремимся к индивидуальному подходу и своевременной помощи, постоянно внедряя новейшие технологии.
+      </p>
     </section>
 
-
-    <section class="container my-5">
-        <h3 class="text-center">Контакты</h3>
-        <p class="text-center">Адрес: Москва, ул. Примерная, д. 1</p>
-        <p class="text-center">Телефон: +7 (495) 620-83-83</p>
+    <section class="mt-5">
+      <h2 class="text-center text-gradient">Аккредитация и лицензии</h2>
+      <p>
+        Наша клиника имеет все необходимые лицензии и сертификаты, подтверждающие высокие стандарты качества и безопасности медицинской помощи.
+        Регулярная аккредитация – гарантия профессионализма нашей организации.
+      </p>
     </section>
 
+    <section class="mt-5">
+      <h2 class="text-center text-gradient">Контактная информация</h2>
+      <p class="text-center">Адрес: Москва, ул. Примерная, д. 1</p>
+      <p class="text-center">Телефон: +7 (495) 620-83-83</p>
+      <p class="text-center">Email: info@medcentr.ru</p>
+    </section>
+  </main>
 
-    <footer class="bg-dark text-light text-center py-3">
-        <p>&copy; 2025 МедЦентр. Все права защищены.</p>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="bg-dark text-light text-center py-3">
+    <p>&copy; 2025 МедЦентр. Все права защищены.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
