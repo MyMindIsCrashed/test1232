@@ -3,6 +3,7 @@
 {% load static %}
 
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,11 +15,12 @@
             background-color: #f8f9fa;
             color: #333;
         }
-    
+        
         .header {
             background: url('/media/static/media/Realistic-3D-Background-of-a-Desolate-Hospital-Hallway-and-Closed_10983947_wh1200.jpg') no-repeat center center fixed;
+            background: url('/static/media/static/media/Realistic-3D-Background-of-a-Desolate-Hospital-Hallway-and-Closed_10983947_wh1200.jpg') no-repeat center center fixed;
             background-size: cover;
-            height: 100vh; 
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -27,7 +29,7 @@
             position: relative;
             padding: 0 15px;
         }
-    
+        
         .header::after {
             content: '';
             position: absolute;
@@ -35,14 +37,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4); 
+            background: rgba(0, 0, 0, 0.4);
         }
-    
+        
         .header div {
             position: relative;
             z-index: 1;
         }
-    
+        
         .header h1 {
             font-size: 3.5rem;
             font-weight: bold;
@@ -50,13 +52,13 @@
             margin: 0;
             animation: fadeInUp 1.5s ease-out;
         }
-    
+        
         .header p {
             font-size: 1.5rem;
             margin-top: 15px;
             animation: fadeInUp 1.8s ease-out;
         }
-    
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -67,68 +69,28 @@
                 transform: translateY(0);
             }
         }
-    
-        .navbar {
-            background-color: rgba(0, 123, 255, 0.8); 
-            padding: 15px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-        }
-    
-        .navbar-brand {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-            text-transform: uppercase;
-        }
-    
-        .navbar-nav .nav-item {
-            margin-left: 20px;
-        }
-    
-        .navbar-nav .nav-link {
-            color: white;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-        }
-    
-        .navbar-nav .nav-link:hover {
-            color: #ffcc00; 
-        }
-    
-        .nav-item #phone .nav-link {
-            font-size: 1.3rem;
-            font-weight: bold;
-            background-color: #ffcc00;
-            border-radius: 5px;
-            padding: 10px 20px;
-            transition: background-color 0.3s ease;
-        }
-    
-        .nav-item #phone .nav-link:hover {
-            background-color: #e0a800;
-        }
+        
         #contact .container {
-        max-width: 800px; 
+            max-width: 800px;
         }
+        
         .form-control {
-        border-radius: 10px; 
+            border-radius: 10px;
         }
+        
         .btn {
-        border-radius: 5px; /
+            border-radius: 5px;
+            /
         }
+        
         #servicesCarousel .carousel-item {
-        padding: 20px; 
+            padding: 20px;
         }
+        
         .carousel-item img {
-        height: 180px; 
-        object-fit: cover; 
-        border-radius: 10px; 
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         .card-img-top {
@@ -136,11 +98,14 @@
             object-fit: cover;     
         }
     </style>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-xxl">
             <a class="navbar-brand" href="#">🏥 МедЦентр</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <div class="span fw-bold text-secondary">
+            </div>
+            </a>
+            <button class="navbar-toggler" , type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -151,61 +116,93 @@
                     <li class="nav-item"><a class="nav-link" href="#doctors">Наши врачи</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
                     <li class="nav-item" id="phone"><a class="nav-link" href="tel:+74956208383">+7 (495) 620-83-83</a></li>
+
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" , href="about/">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" , href="#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" , href="#doctors">Наши врачи</a>
+                    </li>
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link" , href="#contact">Контакты</a>
+                    </li>
+                    <li class="nav-item ms-2 d-none d-md-inline">
+                        <a class="btn btn-secondary" href="#contact">Оставить форму</a>
+                    </li>
                 </ul>
             </div>
+
+
+
+
         </div>
     </nav>
-    
+
+
+
     <header class="header">
         <div>
             <h1 class="text-gradient">Добро пожаловать в МедЦентр</h1>
             <p>Современные медицинские услуги с заботой о каждом пациенте</p>
         </div>
     </header>
-    
+
 
     <section class="container my-5" id="services">
         <h2 class="text-center text-gradient">Наши услуги</h2>
-    
+
         <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-md-3">
                             <img src="/media/static/media/download_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Консультации">
+                            <img src="/static/media/static/media/download-3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Консультации">
                             <p class="text-center mt-2">Консультации специалистов</p>
                         </div>
                         <div class="col-md-3">
                             <img src="/media/static/media/cu-1_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Диагностика">
+                            <img src="/static/media/static/media/cu-1_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Диагностика">
                             <p class="text-center mt-2">Диагностика и анализы</p>
                         </div>
                         <div class="col-md-3">
                             <img src="/media/static/media/download-4_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Хирургия">
+                            <img src="/static/media/static/media/download-4_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Хирургия">
                             <p class="text-center mt-2">Хирургические операции</p>
                         </div>
                         <div class="col-md-3">
                             <img src="/media/static/media/download_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Терапия">
+                            <img src="/static/media/static/media/download_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Терапия">
                             <p class="text-center mt-2">Терапевтическое лечение</p>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-md-3">
                             <img src="/media/static/media/download-3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Консультации">
+                            <img src="/static/media/static/media/download-3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Консультации">
                             <p class="text-center mt-2">Консультации специалистов</p>
                         </div>
                         <div class="col-md-3">
                             <img src="/media/static/media/eye-exams-grayling-mi_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Диагностика">
+                            <img src="/static/media/static/media/eye-exams-grayling-mi_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Диагностика">
                             <p class="text-center mt-2">Диагностика и анализы</p>
                         </div>
                         <div class="col-md-3">
                             <img src="/media/static/media/surgery_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Хирургия">
+                            <img src="/static/media/static/media/surgery_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Хирургия">
                             <p class="text-center mt-2">Хирургические операции</p>
                         </div>
                         <div class="col-md-3">
                             <img src="/media/static/media/img_nduwnji3mji3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Услуга">
+                            <img src="/static/media/static/media/img_nduwnji3mji3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Услуга">
                             <p class="text-center mt-2">Прочее</p>
                         </div>
                     </div>
@@ -221,8 +218,8 @@
             </button>
         </div>
     </section>
-    
-    
+
+
 
     <section class="container my-5" id="doctors">
         <h2 class="text-center text-gradient">Наши специалисты</h2>
@@ -287,30 +284,63 @@
             </ul>
         </nav>
     </section>
-
-<section class="container my-5" id="contact">
-    <h2 class="text-center text-gradient">Свяжитесь с нами</h2>
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form class="text-center">
-                <div class="mb-3">
-                    <label class="form-label">Ваше имя</label>
-                    <input type="text" class="form-control" required>
+    <section class="container my-5" id="doctors">
+        <h2 class="text-center text-gradient">Наши специалисты</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/images/male-doctor-light-surface_392895-24691.avif" class="card-img-top" alt="Доктор">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{i.first_name}}</h5>
+                        <p class="card-text">Хирург, 15 лет опыта</p>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Телефон</label>
-                    <input type="tel" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/images/female-doctor-hospital-with-stethoscope_23-2148827776.avif" class="card-img-top" alt="Доктор">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Анна Смирнова</h5>
+                        <p class="card-text">Терапевт, 10 лет опыта</p>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Отправить</button>
-            </form>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/images/igor.jpg" class="card-img-top" alt="Доктор">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Игорь Петров</h5>
+                        <p class="card-text">Кардиолог, 12 лет опыта</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="bg-dark text-light text-center py-3">
-    <p>&copy; 2025 МедЦентр. Все права защищены.</p>
-</footer>
+    <section class="container my-5" id="contact">
+        <h2 class="text-center text-gradient">Свяжитесь с нами</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="text-center">
+                    <div class="mb-3">
+                        <label class="form-label">Ваше имя</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Телефон</label>
+                        <input type="tel" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2025 МедЦентр. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
 </html>
