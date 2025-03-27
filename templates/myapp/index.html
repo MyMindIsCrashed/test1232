@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+{% load static %}
+
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +16,7 @@
         }
     
         .header {
-            background: url('static/images/Realistic-3D-Background-of-a-Desolate-Hospital-Hallway-and-Closed_10983947_wh1200.jpg') no-repeat center center fixed;
+            background: url('/media/static/media/Realistic-3D-Background-of-a-Desolate-Hospital-Hallway-and-Closed_10983947_wh1200.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh; 
             display: flex;
@@ -127,6 +130,11 @@
         object-fit: cover; 
         border-radius: 10px; 
         }
+
+        .card-img-top {
+            height: 550px;      
+            object-fit: cover;     
+        }
     </style>
     
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -137,6 +145,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                  
                     <li class="nav-item"><a class="nav-link" href="about/">О нас</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
                     <li class="nav-item"><a class="nav-link" href="#doctors">Наши врачи</a></li>
@@ -163,19 +172,19 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="static/media/static/media/male-doctor-light-surface_392895-24691" class="d-block w-100 img-fluid" alt="Консультации">
+                            <img src="/media/static/media/download_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Консультации">
                             <p class="text-center mt-2">Консультации специалистов</p>
                         </div>
                         <div class="col-md-3">
-                            <img src="static/images/cu-1_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Диагностика">
+                            <img src="/media/static/media/cu-1_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Диагностика">
                             <p class="text-center mt-2">Диагностика и анализы</p>
                         </div>
                         <div class="col-md-3">
-                            <img src="static/images/download-4_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Хирургия">
+                            <img src="/media/static/media/download-4_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Хирургия">
                             <p class="text-center mt-2">Хирургические операции</p>
                         </div>
                         <div class="col-md-3">
-                            <img src="static/images/download_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Терапия">
+                            <img src="/media/static/media/download_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Терапия">
                             <p class="text-center mt-2">Терапевтическое лечение</p>
                         </div>
                     </div>
@@ -184,19 +193,19 @@
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="static/media/static/media/download-3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Консультации">
+                            <img src="/media/static/media/download-3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Консультации">
                             <p class="text-center mt-2">Консультации специалистов</p>
                         </div>
                         <div class="col-md-3">
-                            <img src="static/images/eye-exams-grayling-mi_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Диагностика">
+                            <img src="/media/static/media/eye-exams-grayling-mi_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Диагностика">
                             <p class="text-center mt-2">Диагностика и анализы</p>
                         </div>
                         <div class="col-md-3">
-                            <img src="static/images/surgery_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Хирургия">
+                            <img src="/media/static/media/surgery_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Хирургия">
                             <p class="text-center mt-2">Хирургические операции</p>
                         </div>
                         <div class="col-md-3">
-                            <img src="static/images/img_nduwnji3mji3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Услуга">
+                            <img src="/media/static/media/img_nduwnji3mji3_400_300_jpg_5_80.jpg" class="d-block w-100 img-fluid" alt="Услуга">
                             <p class="text-center mt-2">Прочее</p>
                         </div>
                     </div>
@@ -215,38 +224,69 @@
     
     
 
-<section class="container my-5" id="doctors">
-    <h2 class="text-center text-gradient">Наши специалисты</h2>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <img src="static/images/male-doctor-light-surface_392895-24691.avif" class="card-img-top" alt="Доктор">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Дмитрий Иванов</h5>
-                    <p class="card-text">Хирург, 15 лет опыта</p>
+    <section class="container my-5" id="doctors">
+        <h2 class="text-center text-gradient">Наши специалисты</h2>
+    
+        <!-- Форма для поиска и фильтрации -->
+        <form method="get" class="row justify-content-center mb-4">
+            <div class="col-md-4">
+                <input type="text" name="search" class="form-control" placeholder="Поиск..." value="{{ search_query }}">
+            </div>
+            <div class="col-md-3">
+                <select name="job" class="form-select">
+                    <option value="">Все специальности</option>
+                    <option value="Терапевт" {% if filter_job == 'Терапевт' %}selected{% endif %}>Терапевт</option>
+                    <option value="Хирург" {% if filter_job == 'Хирург' %}selected{% endif %}>Хирург</option>
+                    <option value="Педиатр" {% if filter_job == 'Педиатр' %}selected{% endif %}>Педиатр</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary w-100">Применить</button>
+            </div>
+        </form>
+    
+        <!-- Список врачей -->
+        <div class="row">
+            {% for doctor in page_obj %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ doctor.doctor_img.url }}" class="card-img-top" alt="Доктор">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ doctor.first_name }} {{ doctor.last_name }}</h5>
+                        <p class="card-text">{{ doctor.job_type }}</p>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="static/images/female-doctor-hospital-with-stethoscope_23-2148827776.avif" class="card-img-top" alt="Доктор">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Анна Смирнова</h5>
-                    <p class="card-text">Терапевт, 10 лет опыта</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="static/images/igor.jpg" class="card-img-top" alt="Доктор">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Игорь Петров</h5>
-                    <p class="card-text">Кардиолог, 12 лет опыта</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    
+        <!-- Пагинация -->
+        <nav aria-label="Пагинация">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}&search={{ search_query }}&job={{ filter_job }}" aria-label="Предыдущая">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+    
+                {% for num in page_obj.paginator.page_range %}
+                <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+                    <a class="page-link" href="?page={{ num }}&search={{ search_query }}&job={{ filter_job }}">{{ num }}</a>
+                </li>
+                {% endfor %}
+    
+                {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}&search={{ search_query }}&job={{ filter_job }}" aria-label="Следующая">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </section>
 
 <section class="container my-5" id="contact">
     <h2 class="text-center text-gradient">Свяжитесь с нами</h2>
